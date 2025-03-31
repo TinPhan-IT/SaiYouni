@@ -35,6 +35,13 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để in tất cả các phần tử trong mảng
+
+        int[] soNguyen = { 1, 2, 3, 4, 5 };
+
+        foreach (int i in soNguyen)
+        {
+            //Debug.Log(i);
+        }
     }
 
     // Bài Tập 2: Tính Tổng Các Phần Tử Trong Mảng
@@ -42,6 +49,15 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để tính tổng tất cả các phần tử trong mảng
+
+        int[] soNguyen = { 1, 2, 3, 4, 5 };
+        int tong = 0;
+
+        foreach (int i in soNguyen)
+        {
+            tong += i;
+        }
+            //Debug.Log(tong);
     }
 
     // Bài Tập 3: Tìm Phần Tử Lớn Nhất Trong Mảng
@@ -49,6 +65,15 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để tìm phần tử lớn nhất trong mảng
+
+        int[] soNguyen = { 69, 12, 26, 54, 32, 20, 47 };
+
+        int maxValue = int.MinValue;
+        foreach (int i in soNguyen)
+        {
+            if (i > maxValue) maxValue = i;
+        }
+        //Debug.Log(maxValue);
     }
 
     // Bài Tập 4: Đếm Số Lượng Số Chẵn Trong Mảng
@@ -56,6 +81,15 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để đếm số lượng phần tử chẵn trong mảng
+
+        int[] soNguyen = { 69, 12, 26, 54, 32, 20, 47,87 ,101, 8, 61 };
+        
+        int soLuongSoChan = 0;
+        foreach (int i in soNguyen)
+        {
+            if (i % 2 == 0) soLuongSoChan++;
+        }
+        //Debug.Log(soLuongSoChan);
     }
 
     // Bài Tập 5: In Tất Cả Các Chuỗi Trong Danh Sách
@@ -63,6 +97,16 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một danh sách các chuỗi
         // Sử dụng foreach để in tất cả các chuỗi trong danh sách
+
+        List<string> strings = new List<string>
+        {
+            "1","a", "b", "hello world"
+        };
+
+        foreach (string i in strings)
+        {
+            //Debug.Log(i);
+        }
     }
 
     // Bài Tập 6: Tìm Chuỗi Dài Nhất Trong Danh Sách
@@ -70,6 +114,19 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một danh sách các chuỗi
         // Sử dụng foreach để tìm chuỗi dài nhất trong danh sách
+
+        List<string> strings = new List<string>
+        {
+            "1","a", "b", "hello world"
+        };
+
+        string chuoiDaiNhat = "";
+
+        foreach (string i in strings)
+        {
+            if (i.Length >  chuoiDaiNhat.Length) chuoiDaiNhat = i;
+            //Debug.Log(i);
+        }
     }
 
     // Bài Tập 7: Tính Tổng Các Số Lẻ Trong Mảng
@@ -77,6 +134,15 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để tính tổng tất cả các số lẻ trong mảng
+
+        int[] soNguyen = { 69, 12, 26, 54, 32, 20, 47, 87, 101, 8, 61 };
+
+        int tongSoLe = 0;
+        foreach (int i in soNguyen)
+        {
+            if (i % 2 != 0) tongSoLe += i;
+        }
+        //Debug.Log(tongSoLe);
     }
 
     // Bài Tập 8: In Các Số Chẵn Trong Mảng
@@ -84,6 +150,16 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để in tất cả các số chẵn trong mảng
+
+        int[] soNguyen = { 69, 12, 26, 54, 32, 20, 47, 87, 101, 8, 61 };
+
+        foreach (int i in soNguyen)
+        {
+            if (i % 2 == 0)
+            {
+                //Debug.Log(i);
+            }
+        }
     }
 
     // Bài Tập 9: Kiểm Tra Sự Tồn Tại Của Một Phần Tử Trong Mảng
@@ -91,6 +167,18 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên và một phần tử cần kiểm tra
         // Sử dụng foreach để kiểm tra xem phần tử đó có tồn tại trong mảng không
+
+        int[] soNguyen = { 69, 12, 26, 54, 32, 20, 47, 87, 101, 8, 61 };
+        int kiemTraPhanTu = 69;
+        bool tonTai = false;
+        foreach (int i in soNguyen)
+        {
+            if (i == kiemTraPhanTu)
+            {
+                tonTai = true;
+                break;
+            } 
+        }
     }
 
     // Bài Tập 10: Đếm Số Phần Tử Âm Trong Mảng
@@ -98,6 +186,18 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để đếm số lượng các phần tử âm trong mảng
+
+        int[] soNguyen = { 69, -12, 26, 54, 32, -20, -47, 87, 101, -8, 61 };
+        int tongSoAm = 0;
+
+        foreach (int i in soNguyen)
+        {
+            if (i < 0)
+            {
+                tongSoAm++;
+            }
+            //Debug.Log(tongSoAm);
+        }
     }
 
     // Bài Tập 11: In Các Số Lớn Hơn 10 Trong Mảng
@@ -105,6 +205,17 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để in các số lớn hơn 10 trong mảng
+
+        int[] soNguyen = {9, 5, 22, 11, 10, 1, 55};
+        int soLonHon10 = 10;
+
+        foreach (int i in soNguyen)
+        {
+            if (i > soLonHon10)
+            {
+                //Debug.Log(i);
+            }
+        }
     }
 
     // Bài Tập 12: Tìm Chuỗi Có Độ Dài Ngắn Nhất Trong Danh Sách
@@ -112,6 +223,22 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một danh sách các chuỗi
         // Sử dụng foreach để tìm chuỗi có độ dài ngắn nhất trong danh sách
+
+        List<string> strings = new List<string>
+        {
+            "C#","abc", "baba", "hello world", "Unity", "1"
+        };
+
+        string chuoiNgatNhat = strings[0];
+
+        foreach (string i in strings)
+        {
+            if (i.Length < chuoiNgatNhat.Length)
+            {
+                chuoiNgatNhat = i;
+            }
+            //Debug.Log(chuoiNgatNhat);
+        }
     }
 
     // Bài Tập 13: Nhân Đôi Tất Cả Các Phần Tử Trong Mảng
@@ -119,6 +246,14 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để nhân đôi tất cả các phần tử trong mảng
+
+        int[] soNguyen = { 69, 12, 26, 54, 32 };
+
+        foreach (int i in soNguyen)
+        {
+            int ketQua = i * 2;
+            //Debug.Log(ketQua);
+        }
     }
 
     // Bài Tập 14: Tìm Số Lớn Thứ Hai Trong Mảng
@@ -126,6 +261,17 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để tìm phần tử lớn thứ hai trong mảng
+
+        int[] soNguyen = { 69, 12, 26, 54, 32, 20, 47 };
+
+        int maxValue1 = int.MinValue;
+        int maxValue2 = int.MinValue;
+        foreach (int i in soNguyen)
+        {
+            if (i > maxValue1) maxValue1 = i;
+            else if (i > maxValue2 && i < maxValue1) maxValue2 = i;
+        }
+        Debug.Log("Max1" + " " + maxValue1 + ": " + "Max2" + " " + maxValue2);
     }
 
     // Bài Tập 15: Tìm Chuỗi Bắt Đầu Bằng Chữ Cái A
@@ -169,5 +315,4 @@ public class ForeachPractise : MonoBehaviour
         // Tạo một danh sách các chuỗi
         // Sử dụng foreach để in các chuỗi có độ dài lớn hơn 5 ký tự
     }
-
 }
