@@ -179,6 +179,9 @@ public class ForeachPractise : MonoBehaviour
                 break;
             } 
         }
+
+        if (tonTai) Debug.Log(kiemTraPhanTu + " " + "có tồn tại trong mảng");
+        else Debug.Log(kiemTraPhanTu + " " + "không tồn tại");
     }
 
     // Bài Tập 10: Đếm Số Phần Tử Âm Trong Mảng
@@ -271,7 +274,7 @@ public class ForeachPractise : MonoBehaviour
             if (i > maxValue1) maxValue1 = i;
             else if (i > maxValue2 && i < maxValue1) maxValue2 = i;
         }
-        Debug.Log("Max1" + " " + maxValue1 + ": " + "Max2" + " " + maxValue2);
+        //Debug.Log("Max1" + " " + maxValue1 + ": " + "Max2" + " " + maxValue2);
     }
 
     // Bài Tập 15: Tìm Chuỗi Bắt Đầu Bằng Chữ Cái A
@@ -279,6 +282,16 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một danh sách các chuỗi
         // Sử dụng foreach để tìm và in các chuỗi bắt đầu bằng chữ cái 'A'
+
+        string[] strings = { "Apple", "Banana", "C#", "Unity", "Hihi", "Ahaha" };
+
+        foreach (string i in strings) 
+        {
+            if ( i.StartsWith("A"))
+            {
+                //Debug.Log(i);
+            }
+        }
     }
 
     // Bài Tập 16: Kiểm Tra Xem Danh Sách Có Chứa Một Chuỗi Cụ Thể Không
@@ -286,6 +299,21 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một danh sách các chuỗi
         // Sử dụng foreach để kiểm tra xem danh sách có chứa chuỗi "Hello" hay không
+
+        string[] strings = { "Apple", "Banana", "C#", "Unity", "Hihi", "Ahaha", "Hello" };
+        bool isExit = false;
+
+        foreach (string i in strings)
+        {
+            if (i == "Hello")
+            {
+                isExit = true;
+                break;
+            }
+        }
+
+        if (isExit) Debug.Log(isExit + " " + "có tồn tại trong mảng");
+        else Debug.Log(isExit + " " + "không tồn");
     }
 
     // Bài Tập 17: In Tất Cả Các Phần Tử Âm Trong Mảng
@@ -293,6 +321,17 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để in ra tất cả các phần tử âm trong mảng
+
+        int[] soNguyen = { 69, 12, -26, 54, 32, -20, 47 };
+
+        foreach (int i in soNguyen)
+        {
+            if (i < 0)
+            {
+                //Debug.Log(i);
+            }
+
+        }
     }
 
     // Bài Tập 18: Đếm Số Lần Xuất Hiện Của Một Phần Tử Trong Mảng
@@ -300,6 +339,20 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên và một phần tử cụ thể
         // Sử dụng foreach để đếm số lần xuất hiện của phần tử cụ thể đó trong mảng
+
+        int[] soNguyen = { 69, 69, 69, 12, -26, 54, 32, -20, 47};
+
+        int phanTuCanDem = 69;
+        int demPhanTu = 0;
+
+        foreach (int i in soNguyen)
+        {
+            if (i == phanTuCanDem)
+            {
+                demPhanTu++;
+                //Debug.Log(demPhanTu);
+            }
+        }
     }
 
     // Bài Tập 19: Tạo Một Danh Sách Mới Từ Các Phần Tử Lớn Hơn 10 Trong Mảng
@@ -307,6 +360,20 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để tạo một danh sách mới chứa các phần tử có giá trị lớn hơn 10
+
+        int[] soNguyen = { 69, 12, 9, 54, 32, 2 };
+
+        List<int> listInt = new();
+
+        foreach (int i in soNguyen)
+        {
+            if(i > 10) listInt.Add(i);
+        }
+
+        foreach (int i in listInt)
+        {
+            //Debug.Log(i);
+        }
     }
 
     // Bài Tập 20: In Các Chuỗi Có Độ Dài Lớn Hơn 5 Ký Tự
@@ -314,5 +381,15 @@ public class ForeachPractise : MonoBehaviour
     {
         // Tạo một danh sách các chuỗi
         // Sử dụng foreach để in các chuỗi có độ dài lớn hơn 5 ký tự
+
+        string[] strings = { "C#", "abc", "baba", "hello world", "Unity", "1" };
+            
+        foreach (string i in strings)
+        {
+            if (i.Length >= 5)
+            {
+                //Debug.Log(i);
+            }
+        }
     }
 }

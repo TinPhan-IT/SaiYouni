@@ -34,6 +34,13 @@ public class ForPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để in tất cả các phần tử trong mảng
+
+        int[] soNguyen = { 69, 12, 26, 54, 32, 20, 47 };
+
+        for (int i = 0; i < soNguyen.Length; i++)
+        {
+            //Debug.Log(soNguyen[i]);
+        }
     }
 
     // Bài Tập 2: Tính Tổng Các Phần Tử Trong Mảng
@@ -41,6 +48,16 @@ public class ForPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để tính tổng tất cả các phần tử trong mảng
+
+        int[] soNguyen = { 69, 12, 26, 54, 32, 20, 47 };
+
+        int tong = 0;
+
+        for (int i = 0; i < soNguyen.Length; i++)
+        {
+            tong += soNguyen[i];
+            //Debug.Log(tong);
+        }
     }
 
     // Bài Tập 3: Tìm Phần Tử Lớn Nhất Trong Mảng
@@ -48,6 +65,14 @@ public class ForPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để tìm phần tử lớn nhất trong mảng
+
+        int[] soNguyen = { 69, 12, 26, 54, 32, 20, 47 };
+        int maxValue = soNguyen[0];
+        for (int i = 1; i < soNguyen.Length; i++)
+        {
+            if(soNguyen[i] > maxValue ) maxValue = soNguyen[i];
+            //Debug.Log(maxValue);
+        }
     }
 
     // Bài Tập 4: Đếm Số Lượng Số Chẵn Trong Mảng
@@ -55,6 +80,15 @@ public class ForPractise : MonoBehaviour
     {
         // Tạo một mảng số nguyên
         // Sử dụng foreach để đếm số lượng phần tử chẵn trong mảng
+
+        int[] soNguyen = { 69, 12, 54, 32, 17, 87, 100, 8, 61 };
+        int soLuongSoChan = 0;
+
+        for (int i = 0; i < soNguyen.Length; i++)
+        {
+            if (soNguyen[i] % 2 == 0) soLuongSoChan++;
+            Debug.Log(soLuongSoChan);
+        }
     }
 
     // Bài Tập 5: In Tất Cả Các Chuỗi Trong Danh Sách
