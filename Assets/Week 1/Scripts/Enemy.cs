@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     protected int maxEnemyHealth = 100;
 
     //variables 2
-    protected int enemyHealth = 100;
+    public int enemyHealth = 100;
 
     //variables 3 
     protected string enemyName;
