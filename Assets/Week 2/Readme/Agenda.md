@@ -1,8 +1,16 @@
 # Agenda Phát Triển Game Week 2
 
 ## 1. Kể Tên 3 Hàm Màu Xanh (Blue) Mà Unity Sẽ Tự Động Gọi
+- Update
+- Start
+- Awake
 
 ## 2. Kể Tên 5 Loại Giải Thuật Sắp Xếp Khác Nhau
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Quick Sort
+- Merge Sort
 
 ## 3. Dùng Một Giải Thuật Sắp Xếp Khác Để Thay Cho Giải Thuật Trong Buổi Học
 

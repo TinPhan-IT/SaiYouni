@@ -7,3 +7,7 @@ Hướng dẫn này giúp bạn hiểu cách tìm giá trị lớn nhất mà c�
 ## Nội Dung
 
 Chúng ta sẽ tạo một script trong Unity để in ra giá trị lớn nhất của các kiểu dữ liệu `int`, `float`, và `double`.
+
+- int maxInt = int.MaxValue;
+- float maxFloat = float.MaxValue;
+- double maxDouble = double.MaxValue;
